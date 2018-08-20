@@ -1,0 +1,7 @@
+C:\Users\astrid.bossy\source\repos\ProjetCAstrid\ProjetCAstrid\bin\Debug\ProjetCAstrid.exe.config
+C:\Users\astrid.bossy\source\repos\ProjetCAstrid\ProjetCAstrid\bin\Debug\ProjetCAstrid.exe
+C:\Users\astrid.bossy\source\repos\ProjetCAstrid\ProjetCAstrid\bin\Debug\ProjetCAstrid.pdb
+C:\Users\astrid.bossy\source\repos\ProjetCAstrid\ProjetCAstrid\obj\Debug\ProjetCAstrid.csprojAssemblyReference.cache
+C:\Users\astrid.bossy\source\repos\ProjetCAstrid\ProjetCAstrid\obj\Debug\ProjetCAstrid.csproj.CoreCompileInputs.cache
+C:\Users\astrid.bossy\source\repos\ProjetCAstrid\ProjetCAstrid\obj\Debug\ProjetCAstrid.exe
+C:\Users\astrid.bossy\source\repos\ProjetCAstrid\ProjetCAstrid\obj\Debug\ProjetCAstrid.pdb
