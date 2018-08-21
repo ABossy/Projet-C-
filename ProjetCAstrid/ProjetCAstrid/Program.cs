@@ -12,9 +12,9 @@ namespace ProjetCAstrid
     {
         static void Main(string[] args)
         {
-            // <-- Affiche le contenu de ma properties GetMessage définit dans ma class Message -->
-            Message astrid = new Message();
-            Console.WriteLine(astrid.GetMessage);
+            
+            Message message = new Message(8,13,18);
+            Console.WriteLine(message.GetMessage);
         }
     }
 
