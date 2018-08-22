@@ -20,8 +20,9 @@ namespace ProjetCAstrid
             do
             {
                 Console.WriteLine(message.GetMessage);
+                Console.WriteLine("Inscrire exit pour terminer le programme");
             } while (Console.ReadLine()!= "exit");
-            Console.WriteLine("Programme terminé");
+                Console.WriteLine("Programme terminé");
         }
     }
    

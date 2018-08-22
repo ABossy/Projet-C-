@@ -37,7 +37,9 @@ namespace ProjetCAstrid
             {
                 String memo = string.Empty;
 
-                if (_date.date.DayOfWeek == DayOfWeek.Sunday || _date.date.DayOfWeek == DayOfWeek.Saturday && _date.date.Hour < matin && _date.date.Hour > soir)
+                if (_date.date.DayOfWeek == DayOfWeek.Saturday || _date.date.DayOfWeek == DayOfWeek.Sunday  || 
+                    (_date.date.DayOfWeek == DayOfWeek.Monday && _date.date.Hour < matin )|| 
+                    (_date.date.DayOfWeek == DayOfWeek.Friday && _date.date.Hour > soir))
                 {
                     memo = String.Format("Bon Week-end : {0}", Environment.UserName);
                 }
