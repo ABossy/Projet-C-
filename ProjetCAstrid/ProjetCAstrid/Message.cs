@@ -11,23 +11,41 @@ namespace ProjetCAstrid
         private int matin;
         private int am; 
         private int soir;
+        private Idate _date;
+
+
+        // <-- Constructeur -->
+
+        public Message(int DataMatin, int DataAm, int DataSoir)
+            : this(new DateProjet(), DataMatin, DataAm, DataSoir)
+        {
+        }
+
+
+
+        internal Message(Idate date, int DataMatin = 8, int DataAm = 13, int DataSoir = 18)
+        {
+            matin = DataMatin;
+            am = DataAm;
+            soir = DataSoir;
+            _date = date;
+        }
 
         public string GetMessage
         {
             get
             {
                 String memo = string.Empty;
-                DateTime localDate = DateTime.Now;
 
-                if (localDate.DayOfWeek == DayOfWeek.Sunday || localDate.DayOfWeek == DayOfWeek.Saturday && localDate.Hour < matin && localDate.Hour > soir)
+                if (_date.date.DayOfWeek == DayOfWeek.Sunday || _date.date.DayOfWeek == DayOfWeek.Saturday && _date.date.Hour < matin && _date.date.Hour > soir)
                 {
                     memo = String.Format("Bon Week-end : {0}", Environment.UserName);
                 }
-                else if (localDate.Hour < am)
+                else if (_date.date.Hour < am)
                 {
                     memo = String.Format("Bonjour : {0}", Environment.UserName);
                 }
-                else if (localDate.Hour > am && localDate.Hour < soir)
+                else if (_date.date.Hour > am && _date.date.Hour < soir)
                 {
                     memo = String.Format("Bonne Après - Midi : {0}", Environment.UserName);
                 }
@@ -36,22 +54,12 @@ namespace ProjetCAstrid
                     memo = String.Format("Bonsoir !");
                 }
 
-                memo += String.Format(" On est: {0} {1}", localDate.DayOfWeek, localDate.TimeOfDay);
+                memo += String.Format(" On est: {0} {1}", _date.date.DayOfWeek, _date.date.TimeOfDay);
                 return memo;
             }
 
-
         }
-
-       
-
-        // <-- Constructeur -->
-
-        public Message(int DataMatin = 8, int DataAm = 13, int DataSoir = 18){
-            matin =DataMatin;
-            am = DataAm;
-            soir = DataSoir; 
-            
-        }
+  
+        
     }
 }
