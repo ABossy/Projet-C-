@@ -1,0 +1,10 @@
+P:\C#\AppMetroTag\AppMetroTag\obj\Debug\AppMetroTag.csprojAssemblyReference.cache
+P:\C#\AppMetroTag\AppMetroTag\obj\Debug\AppMetroTag.csproj.CoreCompileInputs.cache
+P:\C#\AppMetroTag\AppMetroTag\bin\Debug\AppMetroTag.exe.config
+P:\C#\AppMetroTag\AppMetroTag\bin\Debug\AppMetroTag.exe
+P:\C#\AppMetroTag\AppMetroTag\bin\Debug\AppMetroTag.pdb
+P:\C#\AppMetroTag\AppMetroTag\obj\Debug\AppMetroTag.exe
+P:\C#\AppMetroTag\AppMetroTag\obj\Debug\AppMetroTag.pdb
+P:\C#\AppMetroTag\AppMetroTag\bin\Debug\Newtonsoft.Json.dll
+P:\C#\AppMetroTag\AppMetroTag\bin\Debug\Newtonsoft.Json.xml
+P:\C#\AppMetroTag\AppMetroTag\obj\Debug\AppMetroTag.csproj.CopyComplete
