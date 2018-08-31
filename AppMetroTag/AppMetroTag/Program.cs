@@ -13,7 +13,7 @@ namespace AppMetroTag
         {
           
             Station station = new Station();
-            Station[] listStations = station.request();
+            Station[] listStations = station.Request();
             station.DisplayStation(listStations);
            
              

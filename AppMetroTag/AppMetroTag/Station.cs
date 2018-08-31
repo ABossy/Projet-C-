@@ -15,23 +15,23 @@ namespace AppMetroTag
         public string Id { get; set; }
 
         [JsonProperty("name")]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         [JsonProperty("lon")]
-        public double longitude { get; set; }
+        public double Longitude { get; set; }
 
         [JsonProperty("lat")]
-        public double latitude { get; set; }
+        public double Latitude { get; set; }
 
         [JsonProperty("lines")]
-        public string[] lignes { get; set; }
+        public string[] Lignes { get; set; }
 
 
-        public Station[] request()
+        public Station[] Request()
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
             // Create a request for the URL. 		
-            WebRequest request = WebRequest.Create("https://data.metromobilite.fr/api/linesNear/json?y=45.185270&x=5.727231&dist=600&details=true");
+            WebRequest request = WebRequest.Create("https://data.metromobilite.fr/api/linesNear/json?y=45.185270&x=5.727231&dist=800&details=true");
             // Get the response.
             WebResponse response = request.GetResponse();
             // Get the stream containing content returned by the server.
@@ -40,8 +40,6 @@ namespace AppMetroTag
             StreamReader reader = new StreamReader(dataStream);
             // Read the content.
             string responseFromServer = reader.ReadToEnd();
-            // Display the content.
-            // Cleanup the streams and the response.
             Station[] stations = JsonConvert.DeserializeObject<Station[]>(responseFromServer);
 
             return stations;
@@ -52,22 +50,22 @@ namespace AppMetroTag
         {
 
             IEnumerable<Station> query = from station in stations
-                                         orderby station.name
+                                         orderby station.Name
                                          select station;
             Dictionary<string, List<String>> listeStationUnique = new Dictionary<string, List<String>>();
             foreach (Station station in query)
             {
-                if (!listeStationUnique.ContainsKey(station.name))
+                if (!listeStationUnique.ContainsKey(station.Name))
                 {
-                    listeStationUnique.Add(station.name, new List<String>(station.lignes));
+                    listeStationUnique.Add(station.Name, new List<String>(station.Lignes));
                 }
                 else
                 {
-                    foreach (var line in station.lignes)
+                    foreach (var line in station.Lignes)
                     {
-                        if (!listeStationUnique[station.name].Contains(line))
+                        if (!listeStationUnique[station.Name].Contains(line))
                         {
-                            listeStationUnique[station.name].Add(line);
+                            listeStationUnique[station.Name].Add(line);
 
                         }
                     }
